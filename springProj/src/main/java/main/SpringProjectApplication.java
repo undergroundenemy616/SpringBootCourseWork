@@ -8,6 +8,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 
 @SpringBootApplication
@@ -19,13 +21,7 @@ public class SpringProjectApplication {
 
     }
     @Bean
-    public CommandLineRunner test(BooksRepository repository){
-        return args -> {
-            repository.save(new Books("Fiasko", 25));
-
-            for (Books app : repository.findAll()){
-                log.info("The Book is: " + app.toString());
-            }
-        };
+    public PasswordEncoder passwordEncoder(){
+        return PasswordEncoderFactories.createDelegatingPasswordEncoder();
     }
 }

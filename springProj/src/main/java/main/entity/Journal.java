@@ -21,26 +21,25 @@ public class Journal {
     private Books book;
 
     @ManyToOne
-    @JoinColumn(name = "client_id", nullable = true)
+    @JoinColumn(name = "client_id", nullable = false)
     private Clients client;
 
-    @Column(name = "date_beg", nullable = true)
+    @Column(name = "date_beg", nullable = false)
     private Date dateBegin;
 
-    @Column(name = "date_end", nullable = true)
+    @Column(name = "date_end", nullable = false)
     private Date dateEnd;
 
-    @Column(name = "date_ret", nullable = true)
+    @Column(name = "date_ret")
     private Date dateReturn;
 
     public Journal(){
-        log.info("FUCKFUCKFUCKsfdfdFUCKFUCKFUCK");
+
     }
 
     public Journal(Books book) {
 
         this.book = book;
-        log.info("The ID ISSSSSFIFlkKFJKFHKLFKLJFJKFJSSS");
     }
 
     public Integer getId() {

@@ -9,7 +9,7 @@ public class Clients {
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "first_name")
+    @Column(name = "first_name", nullable = false)
     private String firstName;
 
     @Column(name = "last_name")

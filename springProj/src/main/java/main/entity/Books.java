@@ -15,7 +15,7 @@ public class Books {
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "name")
+    @Column(name = "name", nullable = false)
     private String name;
 
     @Column(name = "cnt")
@@ -26,11 +26,9 @@ public class Books {
     private BookTypes bookType;
 
     public Books(){
-        log.info("fffsdfhdksjhfjdshfdshfdshfdsjfds");
     }
 
     public Books(String name, Integer cnt) {
-        log.info("The ID ISSSSSFIFlkKFJKFHKLFKLJFJKFJSSS");
         this.name = name;
         this.cnt = cnt;
     }
