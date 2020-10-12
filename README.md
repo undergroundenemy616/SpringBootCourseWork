@@ -1,3 +1,3 @@
 # SpringBootCourseWork
 
-Курсовая работа по Java
+Курсовая работа по Spring Framework
